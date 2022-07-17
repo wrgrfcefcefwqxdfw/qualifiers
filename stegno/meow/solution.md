@@ -21,6 +21,7 @@ new.png original.png
 ```
 
 3. Use command zteg to retrieve flag
+-a is to output everything
 ```bash
 $ sudo apt install zsteg
 
