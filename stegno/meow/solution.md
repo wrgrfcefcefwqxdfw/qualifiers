@@ -20,7 +20,7 @@ $ ls
 new.png original.png
 ```
 
-3. Use command zteg to retrieve flag
+3. Use command zteg to retrieve flag </br>
 -a is to output everything
 ```bash
 $ sudo apt install zsteg
