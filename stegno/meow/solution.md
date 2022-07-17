@@ -8,7 +8,7 @@
 
 ## Solution
 
-1. Extract flag file from image
+1. Unzip the downloaded zip file
 ```bash
 $ unzip challenge.zip
 
