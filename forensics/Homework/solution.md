@@ -28,7 +28,8 @@ Doesn't seem to have anything interesting other than evidence of forced labor
 3. Find the readable strings in the document
 
 ```bash
-strings homework.doc
+$ strings homework.doc
+
 bjbj
 Today
 s homework
