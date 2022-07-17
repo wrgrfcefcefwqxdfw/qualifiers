@@ -1,1 +1,1 @@
-some solutions
+some solutions for the qualifiers ctf
