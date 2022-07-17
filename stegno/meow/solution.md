@@ -1,3 +1,32 @@
+# Doll
 
-<h1>What the fuck</h1>
+**Challenge Type: Steganography**  
+**Challenge Status: Unsolved**
+
+## Challenge
+You found an interesting Russian Doll from the factory...
+
+## Solution
+
+1. Extract flag file from image
+```bash
+$ steghide extract -sf doll.jpg
+Enter passphrase: (BLANK)
+```
+
+2. Continually extract
+```bash
+#!/bin/bash
+for i in {1..100}
+do
+  cat flag | base64 -d > $i.zip
+  unzip -o $i.zip 
+done
+```
+
+
+```bash
+cat flag
+NYP{M@try0shkA_d0!!5}
+```
 
