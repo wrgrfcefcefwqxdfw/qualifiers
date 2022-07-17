@@ -7,7 +7,7 @@
 
 ## Solution
 
-1. Run file command to see what file it is 
+1. Run file command to see what file it is </br>
  `$ file homework.doc`
  `Composite Document File V2 Document`
  
@@ -261,10 +261,17 @@ Output
 $flag = "FLAG{w0rd"; $wshell = New-Object -ComObject Wscript.Shell; $wshell.Popup("Hello World",0,":D",0x1); iwr https://nypcgcquals.com/_p0w3r; $s = "shell}"; $a = $s.replace("e", "3")
 ```
 
-6. Understand the powershell script \n
-The $flag variable gives the first part of the flag 'Flag{' \n
-From the next two commands gives a popup box saying hello world \n
-More information here: \n
-https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-display-pop-up-window/ \n
-Next command is an invoke web request command. Since it is not hosted, running the powershell script will give us an Invoke-WebRequest error \n
-However the end of the link is interesting, which is the second part of the flag '_p0w3r'
+6. Understand the powershell script <br />
+The $flag variable gives the first part of the flag `FLAG{w0rd` <br />
+From the next two commands gives a popup box saying hello world <br />
+More information here: <br />
+https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-display-pop-up-window/ <br />
+Next command is an invoke web request command. Since it is not hosted, running the powershell script will give us an Invoke-WebRequest error <br />
+However the end of the link is interesting, which is the second part of the flag `_p0w3r` <br />
+The next two commands initialised a variable s and a. A is the variable to replace the letter 'e' with '3' in s <br />
+Hence the last part of the flag is `sh3ll}`
+
+7. Piece the flag together </br>
+`FLAG{w0rd_p0w3rsh3ll}`
+
+
