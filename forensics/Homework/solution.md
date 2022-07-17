@@ -254,10 +254,17 @@ This looks like powershell code encoded in base64
 
 5. Decode in base64
 ```bash
-echo "JABmAGwAYQBnACAAPQAgACIARgBMAEEARwB7AHcAMAByAGQAIgA7ACAAJAB3AHMAaABlAGwAbAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAALQBDAG8AbQBPAGIAagBlAGMAdAAgAFcAcwBjAHIAaQBwAHQALgBTAGgAZQBsAGwAOwAgACQAdwBzAGgAZQBsAGwALgBQAG8AcAB1AHAAKAAiAEgAZQBsAGwAbwAgAFcAbwByAGwAZAAiACwAMAAsACIAOgBEACIALAAwAHgAMQApADsAIABpAHcAcgAgAGgAdAB0AHAAcwA6AC8ALwBuAHkAcABjAGcAYwBxAHUAYQBsAHMALgBjAG8AbQAvAF8AcAAwAHcAMwByADsAIAAkAHMAIAA9ACAAIgBzAGgAZQBsAGwAfQAiADsAIAAkAGEAIAA9ACAAJABzAC4AcgBlAHAAbABhAGMAZQAoACIAZQAiACwAIAAiADMAIgApAA==
-base64: 'JABmAGwAYQBnACAAPQAgACIARgBMAEEARwB7AHcAMAByAGQAIgA7ACAAJAB3AHMAaABlAGwAbAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAALQBDAG8AbQBPAGIAagBlAGMAdAAgAFcAcwBjAHIAaQBwAHQALgBTAGgAZQBsAGwAOwAgACQAdwBzAGgAZQBsAGwALgBQAG8AcAB1AHAAKAAiAEgAZQBsAGwAbwAgAFcAbwByAGwAZAAiACwAMAAsACIAOgBEACIALAAwAHgAMQApADsAIABpAHcAcgAgAGgAdAB0AHAAcwA6AC8ALwBuAHkAcABjAGcAYwBxAHUAYQBsAHMALgBjAG8AbQAvAF8AcAAwAHcAMwByADsAIAAkAHMAIAA9ACAAIgBzAGgAZQBsAGwAfQAiADsAIAAkAGEAIAA9ACAAJABzAC4AcgBlAHAAbABhAGMAZQAoACIAZQAiACwAIAAiADMAIgApAA==" | base64 -d
+echo "JABmAGwAYQBnACAAPQAgACIARgBMAEEARwB7AHcAMAByAGQAIgA7ACAAJAB3AHMAaABlAGwAbAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAALQBDAG8AbQBPAGIAagBlAGMAdAAgAFcAcwBjAHIAaQBwAHQALgBTAGgAZQBsAGwAOwAgACQAdwBzAGgAZQBsAGwALgBQAG8AcAB1AHAAKAAiAEgAZQBsAGwAbwAgAFcAbwByAGwAZAAiACwAMAAsACIAOgBEACIALAAwAHgAMQApADsAIABpAHcAcgAgAGgAdAB0AHAAcwA6AC8ALwBuAHkAcABjAGcAYwBxAHUAYQBsAHMALgBjAG8AbQAvAF8AcAAwAHcAMwByADsAIAAkAHMAIAA9ACAAIgBzAGgAZQBsAGwAfQAiADsAIAAkAGEAIAA9ACAAJABzAC4AcgBlAHAAbABhAGMAZQAoACIAZQAiACwAIAAiADMAIgApAA==" | base64 -d
 ```
 Output
 ```
-$ flag = "FLAG{w0rd"; $wshell = New-Object -ComObject Wscript.Shell; $wshell.Popup("Hello World",0,":D",0x1); iwr https://nypcgcquals.com/_p0w3r; $s = "shell}"; $a = $s.replace("e", "3")
+$flag = "FLAG{w0rd"; $wshell = New-Object -ComObject Wscript.Shell; $wshell.Popup("Hello World",0,":D",0x1); iwr https://nypcgcquals.com/_p0w3r; $s = "shell}"; $a = $s.replace("e", "3")
 ```
+
+6. Understand the powershell script
+The $flag variable gives the first part of the flag 'Flag{'
+From the next two commands gives a popup box saying hello world
+More information here:
+https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-display-pop-up-window/
+Next command is an invoke web request command. Since it is not hosted, running the powershell script will give us an Invoke-WebRequest error
+However the end of the link is interesting, which is the second part of the flag '_p0w3r'
