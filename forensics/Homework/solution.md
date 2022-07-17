@@ -8,8 +8,10 @@
 ## Solution
 
 1. Run file command to see what file it is </br>
- `$ file homework.doc`
- `Composite Document File V2 Document`
+ ```
+ $ file homework.doc
+ Composite Document File V2 Document
+ ```
  
 2. Use antiword or Microsoft Word to see what is in the file
 ```bash
