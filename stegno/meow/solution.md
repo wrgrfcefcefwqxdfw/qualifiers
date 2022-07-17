@@ -1,7 +1,7 @@
-# Doll
+# Meow
 
 **Challenge Type: Steganography**  
-**Challenge Status: Unsolved**
+
 
 ## Challenge
 You found an interesting Russian Doll from the factory...
@@ -10,23 +10,25 @@ You found an interesting Russian Doll from the factory...
 
 1. Extract flag file from image
 ```bash
-$ steghide extract -sf doll.jpg
-Enter passphrase: (BLANK)
+$ unzip challenge.zip
+
 ```
 
-2. Continually extract
+2. You will find two files
 ```bash
-#!/bin/bash
-for i in {1..100}
-do
-  cat flag | base64 -d > $i.zip
-  unzip -o $i.zip 
-done
+ls 
+new.png original.png
 ```
 
-
+3. Use command zteg to retrieve flag
 ```bash
-cat flag
-NYP{M@try0shkA_d0!!5}
+sudo apt install zsteg
+
+zsteg -a new.png | grep -oE "FLAG{.*?}" --color=none
+
+[?] 24 bytes of extra data after image end (IEND), offset = 0x7af6b
+FLAG{I_am_not_the_flag}
+FLAG{58b7eb5ebaa12a0515c0dac315aa2611}
+
 ```
 
