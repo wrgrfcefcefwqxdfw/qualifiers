@@ -4,6 +4,7 @@
 
 
 ## Challenge
+We received our daily email from our teacher about our homework but it looks different today :(
 
 ## Solution
 
