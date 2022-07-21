@@ -77,7 +77,7 @@ File: 'homeans.docx'
 Found relationship 'oleObject' with external link https://test.gabrielseet.com/office/word/2022/wordprocessingDrawing/th1s.html!
 ```
 Here we can see that the document has a relationship with a external link, which is bad as this could invoke malicious code. But in this case, it could be our flag. </br>
-https://test.gabrielseet.com/office/word/2022/wordprocessingDrawing/th1s.html! </br>
+https://test.gabrielseet.com/office/word/2022/wordprocessingDrawing/th1s.html </br>
 
 ## How to get the flag
-Since the link is not hosted, you need to open a ticket </br>
+Since the link is not hosted, you need to open a ticket with the boss</br>
