@@ -24,6 +24,7 @@ The original cyberchef recipe is this: </br>
 https://gchq.github.io/CyberChef/#recipe=Unzip('',false)Extract_URLs(false,false,false)Filter('Line%20feed','http://schemas%5C%5C.openxmlformats%5C%5C.org/',true)Filter('Line%20feed','http://schemas%5C%5C.microsoft%5C%5C.com/',true)Filter('Line%20feed','http://purl%5C%5C.org/',true)Filter('Line%20feed','http://www%5C%5C.w3%5C%5C.org/',true)Defang_URL(true,true,true,'Valid%20domains%20and%20full%20URLs')</br>
 but I found that the defang thing at the end is not needed.
 
+What it does is that it unzip the OOXML file, because OOXML are zip file containers, then you extract all the urls from the embeded files. The filtering is used to filter out all the https://schemas and other links that we may not need. </br>
 By using the recipe, we extracted an URL from the OOXML file. </br>
 https://test.gabrielseet.com/office/word/2022/wordprocessingDrawing/th1s.html
 
