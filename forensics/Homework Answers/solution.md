@@ -19,8 +19,8 @@ There are two ways in which this can be solved, using cyberchef and python oleto
 ## CyberChef method
 
 I saw an article on how you can use cyberchef to extract URLs from it</br>
-https://isc.sans.edu/diary/CyberChef%3A+Analyzing+OOXML+Files+for+URLs/27020</br>
-The original cyberchef recipe is this: </br></br>
+https://isc.sans.edu/diary/CyberChef%3A+Analyzing+OOXML+Files+for+URLs/27020</br></br>
+The original cyberchef recipe is this: </br>
 https://gchq.github.io/CyberChef/#recipe=Unzip('',false)Extract_URLs(false,false,false)Filter('Line%20feed','http://schemas%5C%5C.openxmlformats%5C%5C.org/',true)Filter('Line%20feed','http://schemas%5C%5C.microsoft%5C%5C.com/',true)Filter('Line%20feed','http://purl%5C%5C.org/',true)Filter('Line%20feed','http://www%5C%5C.w3%5C%5C.org/',true)Defang_URL(true,true,true,'Valid%20domains%20and%20full%20URLs')</br>
 but I found that the defang thing at the end is not needed.
 
